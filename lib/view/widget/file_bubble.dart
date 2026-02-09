@@ -38,9 +38,11 @@ class FileBubble extends StatelessWidget {
               children: [
                 if (message.content.endsWith('.pdf'))
                   Icon(Icons.picture_as_pdf, size: 40, color: Colors.red)
-                else if (message.content.endsWith('.doc'))
+                else if (message.content.endsWith('.doc') ||
+                    message.content.endsWith('.docx'))
                   Icon(Icons.description, size: 40, color: Colors.red)
-                else if (message.content.endsWith('.xls'))
+                else if (message.content.endsWith('.xls') ||
+                    message.content.endsWith('.xlsx'))
                   Icon(Icons.table_chart, size: 40, color: Colors.red),
                 SizedBox(width: 8),
                 Expanded(
